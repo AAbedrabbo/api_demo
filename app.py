@@ -14,7 +14,7 @@ def update_sheet():
     """
     Input: None
     
-    Output: 
+    Output: Updated Excel sheet
     
     """
     url = "https://api.openweathermap.org/data/2.5/weather?q=New%20York&units=metric&appid=6afed078490ecfc7c483c00353bb1d30"
@@ -49,10 +49,8 @@ def update_sheet():
         
     df['Minute'] = minute
         
-        
     df.columns = ["Desc", "Temp (C)", "Humidity", "Date/Time stamp", "Month", "Day", "Hour", "Minute"]
     
-
     # Read last version of data 
     last_version = pd.read_excel("API_demo_results.xlsx", index_col= 0)
     
