@@ -17,7 +17,7 @@ def update_sheet():
     Output: Updated Excel sheet
     
     """
-    url = "https://api.openweathermap.org/data/2.5/weather?q=New%20York&units=metric&appid=6afed078490ecfc7c483c00353bb1d30"
+    url = "https://api.openweathermap.org/data/2.5/weather?q=New%20York&units=metric&appid={API_Key}"
     
     json_response = requests.get(url).json()
     
